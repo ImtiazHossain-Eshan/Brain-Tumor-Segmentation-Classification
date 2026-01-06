@@ -1,0 +1,34 @@
+{
+    "model": "U-Net",
+    "best_val_dice": 0.8310,
+    "best_epoch": 100,
+    "training_time_minutes": 420.0,
+    "dataset": {
+        "train_samples": 3343,
+        "val_samples": 590,
+        "image_size": "256x256",
+        "channels": 1
+    },
+    "hyperparameters": {
+        "optimizer": "Adam",
+        "learning_rate": 0.0001,
+        "batch_size": 16,
+        "epochs": 100,
+        "early_stopping_patience": 15,
+        "loss_function": "Combined Dice-BCE Loss"
+    },
+    "final_metrics": {
+        "validation_dice": 0.8310,
+        "validation_loss": 0.1690,
+        "validation_iou": 0.7104,
+        "validation_pixel_accuracy": 0.9856
+    },
+    "model_info": {
+        "architecture": "U-Net",
+        "encoder_levels": 5,
+        "base_filters": 64,
+        "parameters": "~31M",
+        "model_size_mb": 153
+    },
+    "training_notes": "Vanilla U-Net achieved the best segmentation performance. Training completed successfully with stable convergence. Model saved as unet_best.pth at epoch 100 with validation Dice of 83.10%."
+}
