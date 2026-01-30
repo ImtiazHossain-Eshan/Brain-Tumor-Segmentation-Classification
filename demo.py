@@ -94,7 +94,7 @@ def create_overlay(image, mask, alpha=0.5, color_mask='red'):
     return overlay
 
 
-def inference_on_image(image_path, seg_model, cls_model, device):
+def inference_on_image(image_path, seg_model, cls_model, device, output_prefix='demo'):
     """
     Run BOTH segmentation AND classification inference on an image
     Display result in REQUIRED format:
@@ -112,6 +112,7 @@ def inference_on_image(image_path, seg_model, cls_model, device):
         seg_model: Trained segmentation model
         cls_model: Trained classification model
         device: Device
+        output_prefix: Prefix for output filename (default: 'demo')
     """
     # Load image
     image = cv2.imread(str(image_path), cv2.IMREAD_GRAYSCALE)
@@ -266,7 +267,7 @@ def inference_on_image(image_path, seg_model, cls_model, device):
     plt.tight_layout(rect=[0, 0, 1, 0.96])
     
     # Save
-    save_path = FIGURES_DIR / f"demo_{Path(image_path).stem}.png"
+    save_path = FIGURES_DIR / f"{output_prefix}_{Path(image_path).stem}.png"
     plt.savefig(save_path, dpi=200, bbox_inches='tight')
     print(f"✓ Saved demonstration to {save_path}")
     
@@ -330,7 +331,8 @@ def demo_random_images(seg_model_path, cls_model_path, seg_model_type='unet', cl
     print(f"✓ All visualizations saved to {FIGURES_DIR}/")
 
 
-def demo_on_provided_image(image_path, seg_model_path, cls_model_path, seg_model_type='unet', cls_model_type='densenet'):
+
+def demo_on_provided_image(image_path, seg_model_path, cls_model_path, seg_model_type='unet', cls_model_type='densenet', output_prefix='demo'):
     """
     Run demonstration on a specific image provided by faculty
     This will be used during the actual demonstration
@@ -341,6 +343,7 @@ def demo_on_provided_image(image_path, seg_model_path, cls_model_path, seg_model
         cls_model_path: Path to trained classification model
         seg_model_type: Model type ('unet' or 'attention_unet')
         cls_model_type: Classifier type ('densenet', 'efficientnet', 'mobilenet')
+        output_prefix: Prefix for output filename (default: 'demo')
     """
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
@@ -358,7 +361,7 @@ def demo_on_provided_image(image_path, seg_model_path, cls_model_path, seg_model
     
     # Run inference
     print(f"Running inference on {image_path}...")
-    pred_mask = inference_on_image(image_path, seg_model, cls_model, device)
+    pred_mask = inference_on_image(image_path, seg_model, cls_model, device, output_prefix=output_prefix)
     
     return pred_mask
 

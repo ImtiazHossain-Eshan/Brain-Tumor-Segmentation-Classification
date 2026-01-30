@@ -1,0 +1,25 @@
+{
+    "model_name": "U-Net",
+    "evaluation_date": "2026-01-30 22:27:31",
+    "dataset_info": {
+        "total_samples": 860,
+        "batch_size": 16,
+        "image_size": [
+            256,
+            256
+        ]
+    },
+    "test_metrics": {
+        "loss": 0.06979031691810599,
+        "dice_coefficient": 0.8822438871418988,
+        "mIoU": 0.7974482890632417,
+        "pixel_accuracy": 0.9961394446867483
+    },
+    "statistics": {
+        "mean_loss": 0.06979031691810599,
+        "min_loss": 0.021330956369638443,
+        "max_loss": 0.21705257892608643,
+        "std_loss": 0.04550618107180877
+    },
+    "evaluation_time_seconds": 23.7517306804657
+}

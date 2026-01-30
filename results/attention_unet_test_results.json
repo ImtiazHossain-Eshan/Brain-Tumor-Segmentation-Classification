@@ -1,0 +1,25 @@
+{
+    "model_name": "Attention U-Net",
+    "evaluation_date": "2026-01-30 22:27:57",
+    "dataset_info": {
+        "total_samples": 860,
+        "batch_size": 16,
+        "image_size": [
+            256,
+            256
+        ]
+    },
+    "test_metrics": {
+        "loss": 0.07232714027028393,
+        "dice_coefficient": 0.8782718899073424,
+        "mIoU": 0.792138350782571,
+        "pixel_accuracy": 0.9959063242982935
+    },
+    "statistics": {
+        "mean_loss": 0.07232714027028393,
+        "min_loss": 0.021588897332549095,
+        "max_loss": 0.2539321184158325,
+        "std_loss": 0.04925220027614766
+    },
+    "evaluation_time_seconds": 24.856653451919556
+}

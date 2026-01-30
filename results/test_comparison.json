@@ -1,0 +1,20 @@
+{
+    "comparison_date": "2026-01-30 22:27:57",
+    "unet_results": {
+        "loss": 0.06979031691810599,
+        "dice_coefficient": 0.8822438871418988,
+        "mIoU": 0.7974482890632417,
+        "pixel_accuracy": 0.9961394446867483
+    },
+    "attention_unet_results": {
+        "loss": 0.07232714027028393,
+        "dice_coefficient": 0.8782718899073424,
+        "mIoU": 0.792138350782571,
+        "pixel_accuracy": 0.9959063242982935
+    },
+    "summary": {
+        "unet_wins": 4,
+        "attention_unet_wins": 0,
+        "ties": 0
+    }
+}
