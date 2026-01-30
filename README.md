@@ -7,17 +7,17 @@
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This project implements a comprehensive solution for brain tumor segmentation and classification using the BRISC 2025 dataset. The implementation includes:
 
-### Main Tasks ✅
+### Main Tasks 
 1. **U-Net Segmentation** - Vanilla U-Net architecture for pixel-wise tumor segmentation
 2. **Attention U-Net** - Enhanced U-Net with attention gates for improved segmentation
 3. **Classification Head** - Multi-class brain tumor classification (4 classes)
 4. **Inference System** - Demonstration pipeline for random image prediction
 
-### Bonus Tasks ✅
+### Bonus Tasks 
 1. **Joint vs Separate Training Analysis** - Comprehensive comparison of multi-task learning strategies
 2. **Multiple Classifier Architectures** - Comparison of MobileNet, EfficientNet, and DenseNet
 3. **Hyperparameter Optimization** - Extensive study of optimizers, learning rates, and batch sizes
@@ -115,7 +115,7 @@ Runs inference on random test images and displays results in the required format
 
 ---
 
-## 📊 Expected Results
+##  Expected Results
 
 ### Segmentation Metrics
 - **mIoU (mean Intersection over Union)**: Measures overlap between prediction and ground truth
@@ -130,7 +130,7 @@ Runs inference on random test images and displays results in the required format
 
 ---
 
-## 🧪 Bonus Task Explanations
+##  Bonus Task Explanations
 
 ### Bonus 1: Joint vs Separate Training
 
@@ -222,7 +222,7 @@ P7 ←── P6 ←── P5 ←── P4 ←── P3  (bottom-up pathway)
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 The complete IEEE format documentation is available at:
 ```
@@ -239,7 +239,7 @@ pdflatex CSE428_Project_Imtiaz_Hossain_23101137.tex
 
 ---
 
-## 🎯 Assessment Components
+## Assessment Components
 
 ### 1. Attendance (1%)
 - Present during lab sessions
@@ -263,7 +263,7 @@ pdflatex CSE428_Project_Imtiaz_Hossain_23101137.tex
 
 ---
 
-## 💡 Key Implementation Notes
+## Key Implementation Notes
 
 ### Data Augmentation Strategy
 All augmentations preserve tumor regions:
@@ -285,7 +285,7 @@ All augmentations preserve tumor regions:
 
 ---
 
-## 📈 Evaluation Protocol
+## Evaluation Protocol
 
 All models evaluated on:
 - **Training set:** Monitor overfitting
@@ -296,7 +296,7 @@ All models evaluated on:
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 **CUDA Out of Memory:**
 - Reduce batch size in `config.py`
@@ -315,7 +315,7 @@ All models evaluated on:
 
 ---
 
-## 📚 References
+## References
 
 1. Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. MICCAI.
 
@@ -329,7 +329,7 @@ All models evaluated on:
 
 ---
 
-## 📝 Author
+## Author
 
 **Imtiaz Hossain**  
 ID: 23101137  
@@ -338,7 +338,7 @@ BRAC University
 
 ---
 
-## 📄 License
+## License
 
 This project is submitted as part of CSE428 course requirements. All rights reserved.
 
