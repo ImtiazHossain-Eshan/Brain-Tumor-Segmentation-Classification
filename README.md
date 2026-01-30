@@ -145,7 +145,7 @@ git lfs version
 
 ---
 
-## �🚀 Quick Start
+##  Quick Start
 
 ### 1. Install Dependencies
 
