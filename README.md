@@ -69,7 +69,7 @@ Project/
 
 ---
 
-## � Cloning This Repository
+## Cloning This Repository
 
 This repository uses **Git Large File Storage (LFS)** to manage large model files (~675 MB). Follow these steps to properly clone the repository:
 
