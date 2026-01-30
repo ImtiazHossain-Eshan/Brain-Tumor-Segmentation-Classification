@@ -69,7 +69,83 @@ Project/
 
 ---
 
-## 🚀 Quick Start
+## � Cloning This Repository
+
+This repository uses **Git Large File Storage (LFS)** to manage large model files (~675 MB). Follow these steps to properly clone the repository:
+
+### Prerequisites
+
+**1. Install Git**
+- **Windows:** Download from [git-scm.com](https://git-scm.com/download/windows)
+- **macOS:** `brew install git`
+- **Linux (Ubuntu/Debian):** `sudo apt-get install git`
+
+**2. Install Git LFS**
+- **Windows:** Download from [git-lfs.github.com](https://git-lfs.github.com/) or it may already be included with Git for Windows
+- **macOS:** `brew install git-lfs`
+- **Linux (Ubuntu/Debian):** `sudo apt-get install git-lfs`
+
+**3. Initialize Git LFS** (one-time setup)
+```bash
+git lfs install
+```
+
+### Clone the Repository
+
+```bash
+# Navigate to your desired directory
+cd /path/to/your/projects
+
+# Clone the repository (this will automatically download all LFS files)
+git clone https://github.com/ImtiazHossain-Eshan/Brain-Tumor-Segmentation-Classification.git
+
+# Navigate into the repository
+cd Brain-Tumor-Segmentation-Classification
+```
+
+### Verify LFS Files
+
+Check that the large model files were downloaded correctly:
+
+```bash
+# List all LFS-tracked files
+git lfs ls-files
+
+# Check model file sizes (should be 150+ MB each, not ~130 bytes)
+# Windows PowerShell:
+Get-ChildItem -Path "models" -Filter "*.pth" | Select-Object Name, Length
+
+# Linux/Mac:
+ls -lh models/*.pth
+```
+
+### Troubleshooting
+
+**If LFS files didn't download automatically:**
+```bash
+git lfs pull
+```
+
+**If you see small ~130 byte pointer files instead of actual model files:**
+```bash
+# Ensure LFS is properly installed
+git lfs install
+
+# Download the actual large files
+git lfs pull
+```
+
+**Verify Git LFS installation:**
+```bash
+git lfs version
+# Should show: git-lfs/3.x.x or higher
+```
+
+> **⚠️ Important:** Do NOT download this repository as a ZIP file from GitHub. The ZIP download only includes small pointer files, not the actual trained model files. Always use `git clone` with Git LFS installed.
+
+---
+
+## �🚀 Quick Start
 
 ### 1. Install Dependencies
 
